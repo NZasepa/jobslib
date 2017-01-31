@@ -1,0 +1,16 @@
+@import 'functions';
+@import 'variables';
+
+@mixin rem($property, $size, $base: $base-font-size) {
+  #{$property}: strip-unit($size) + px;
+  #{$property}: (strip-unit($size) / strip-unit($base)) + rem;
+}
+
+@mixin _clearfix() {
+  &:before,
+  &:after {
+    content: ' ';
+    clear: both;
+    display: table;
+  }
+}
