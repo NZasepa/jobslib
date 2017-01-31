@@ -1,0 +1,24 @@
+@import 'variables';
+
+// Strip units
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+// Get width based on the percentage of width-divider variable
+@function parent-width-by-percent($parent-percent) {
+  @return strip-unit($parent-percent) * $width-divider;
+}
+
+// Get value based on the width divider
+@function get-width($width, $parent-percent-width: '') {
+  @if type-of($parent-percent-width) == 'number' {
+    @return strip-unit($width) / (parent-width-by-percent($parent-percent-width) / 100) + %;
+  }
+
+  @return strip-unit($width) / $width-divider + %;
+}
