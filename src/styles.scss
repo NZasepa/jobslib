@@ -1,3 +1,52 @@
+// Vendors
+@import './assets/scss/variables';
+@import './assets/scss/mixins';
+
+// Import normalize
+@import './assets/scss/normalize';
+
+* {
+  box-sizing: border-box;
+
+  &:before,
+  &:after {
+    box-sizing: border-box;
+  }
+}
+
+html {
+  font-size: $base-font-size;
+}
+
 body {
   background-color: #e4e4e4;
+}
+
+/*
+  Misc
+ */
+.clearfix {
+  @include _clearfix();
+}
+
+/*
+  Menu styling
+ */
+.menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.horizontal-menu {
+  > li {
+    float: left;
+    @include rem('margin-left', 20px);
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  @include _clearfix();
 }
