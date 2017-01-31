@@ -1,0 +1,82 @@
+@import '../../assets/scss/variables';
+@import '../../assets/scss/mixins';
+@import '../../assets/scss/functions';
+
+div.top-bar {
+  position: relative;
+  width: 100%;
+  @include rem(padding-left, 30px);
+  @include rem(padding-right, 30px);
+  background-color: $color-topbar-bg;
+  z-index: 100;
+
+  @include _clearfix();
+
+  .menu {
+    float: right;
+
+    > li {
+      margin: 0;
+    }
+
+    a {
+      display: block;
+      @include rem(padding-left, 10px);
+      @include rem(padding-right, 10px);
+      @include rem(line-height, 40px);
+      color: $color-topbar-font;
+      text-decoration: none;
+      transition: $transition-all;
+
+      &:hover {
+        background-color: darken($color-topbar-bg, 10%);
+      }
+    }
+  }
+}
+
+header.main-header {
+  position: relative;
+  @include rem(min-height, $header-height);
+  background-color: $color-header-bg;
+  box-shadow: $shadow-header;
+  z-index: 90;
+
+  @include _clearfix();
+
+  .site-logo {
+    float: left;
+    width: $header-logo-width;
+    @include rem(padding-top, 30px);
+    @include rem(padding-bottom, 30px);
+    @include rem(padding-right, 30px);
+    @include rem(padding-left, 30px);
+    background-color: $color-header-logo-bg;
+
+    a,
+    img {
+      display: block;
+    }
+  }
+}
+
+.site-job-search {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100% - $header-logo-width;
+  @include rem(padding-right, 30px);
+  @include rem(padding-left, 30px);
+
+  @include _clearfix();
+
+  .search-input {
+    float: left;
+  }
+
+  .input-locale {
+    width: get-width(66px, 80%);
+    height: 40%;
+  }
+}
