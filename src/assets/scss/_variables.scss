@@ -1,15 +1,20 @@
 // Default settings
-$width-divider: 1366 / 100;
+$width-divider: 1366 / 100!default;;
 $base-font-size: 16px!default;
-$transition-all: all .2s ease-in-out;
+$transition-all: all .2s ease-in-out!default;;
+
+// Forms
+$color-search-input-bg: #707070!default;
+$color-search-field-description: #cfcfcf!default;
+$color-search-field-placeholder: #707070!default;
 
 // Topbar
 $color-topbar-bg: #edba3b!default;
 $color-topbar-font: #ffffff!default;
 
 // Header
-$header-height: 100px;
-$header-logo-width: 20%;
-$shadow-header: 3px 0 7px rgba(0, 0, 0, 0.1);
+$header-height: 100px!default;;
+$header-logo-width: 20%!default;;
+$shadow-header: 3px 0 7px rgba(0, 0, 0, 0.1)!default;;
 $color-header-bg: #4b4b4b!default;
 $color-header-logo-bg: #ffffff!default;

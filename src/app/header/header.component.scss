@@ -65,6 +65,9 @@ header.main-header {
   top: 0;
   bottom: 0;
   right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 100% - $header-logo-width;
   @include rem(padding-right, 30px);
   @include rem(padding-left, 30px);
@@ -75,8 +78,47 @@ header.main-header {
     float: left;
   }
 
+  input[type="text"],
+  input[type="tel"],
+  input[type="date"],
+  input[type="number"],
+  input[type="password"] {
+    display: block;
+    height: 100%;
+    width: 100%;
+    @include rem(padding-left, 13px);
+    @include rem(padding-right, 13px);
+    background: transparent;
+    box-shadow: none;
+    outline: none;
+  }
+
+  .input-full {
+    background-color: $color-search-input-bg;
+  }
+
+  .input-border {
+    border: 1px solid #{$color-search-input-bg};
+  }
+
   .input-locale {
     width: get-width(66px, 80%);
     height: 40%;
+  }
+
+  .input-search-term,
+  .input-search-location{
+    width: get-width(300px, 80%);
+    height: 40%;
+
+    input {
+      font-size: calc(1vw + 1vh);
+    }
+
+    small {
+      margin-left: get-width(30px);
+      margin-top: get-width(25px);
+      color: $color-search-field-description;
+    }
   }
 }

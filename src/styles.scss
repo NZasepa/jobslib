@@ -29,6 +29,14 @@ body {
   @include _clearfix();
 }
 
+.box-container {
+  position: relative;
+}
+
+.box-children {
+  position: absolute;
+}
+
 /*
   Menu styling
  */
