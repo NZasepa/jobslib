@@ -72,8 +72,6 @@ header.main-header {
   @include rem(padding-right, 30px);
   @include rem(padding-left, 30px);
 
-  @include _clearfix();
-
   .search-input {
     float: left;
   }
@@ -112,7 +110,7 @@ header.main-header {
     height: 40%;
 
     input {
-      font-size: calc(1vw + 1vh);
+      font-size: calc(100vw / 82); // Not sure why it fits, but it's the best scaling font size
     }
 
     small {
