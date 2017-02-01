@@ -110,7 +110,9 @@ header.main-header {
     height: 40%;
 
     input {
-      font-size: calc(100vw / 82); // Not sure why it fits, but it's the best scaling font size
+      // TODO: Change it or sort out how it works
+      // I've found out that dividing design width with design font size will produce the best divider for the calc
+      font-size: flexible-font-size(100vw, 18px); // Not sure why it fits, but it's the best scaling font size
     }
 
     small {

@@ -1,5 +1,6 @@
 // Default settings
-$width-divider: 1366 / 100!default;;
+$width-design: 1366;
+$width-divider: $width-design / 100!default;;
 $base-font-size: 16px!default;
 $transition-all: all .2s ease-in-out!default;;
 

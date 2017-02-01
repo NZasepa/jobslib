@@ -22,3 +22,8 @@
 
   @return strip-unit($width) / $width-divider + %;
 }
+
+// Get font-size based on the design width and design font size
+@function flexible-font-size($vw, $font-size) {
+  @return calc(#{strip-unit($vw) + vw} / #{strip-unit($width-design) / strip-unit($font-size)});
+}
