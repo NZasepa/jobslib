@@ -27,3 +27,8 @@
 @function flexible-font-size($vw, $font-size) {
   @return calc(#{strip-unit($vw) + vw} / #{strip-unit($width-design) / strip-unit($font-size)});
 }
+
+// Get font-size based on the min and max width
+@function by-viewport-size($min-size, $max-size) {
+  @return calc(#{strip-unit($min-size) + px} + (#{strip-unit($max-size)} - #{strip-unit($min-size)}) * ((100vw - #{$width-min + px}) / #{$width-max}));
+}

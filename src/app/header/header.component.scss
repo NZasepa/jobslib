@@ -100,8 +100,14 @@ header.main-header {
   }
 
   .input-locale {
-    width: get-width(66px, 80%);
+    min-width: get-width(66px, 80%);
     height: 40%;
+    padding: get-width(6px, 80%);
+
+    img {
+      width: auto;
+      height: 100%;
+    }
   }
 
   .input-search-term,
@@ -112,12 +118,13 @@ header.main-header {
     input {
       // TODO: Change it or sort out how it works
       // I've found out that dividing design width with design font size will produce the best divider for the calc
-      font-size: flexible-font-size(100vw, 18px); // Not sure why it fits, but it's the best scaling font size
+      font-size: by-viewport-size(12px, 20px); // Not sure why it fits, but it's the best scaling font size
     }
 
     small {
       margin-left: get-width(30px);
-      margin-top: get-width(25px);
+      margin-top: get-width(20px);
+      font-size: by-viewport-size(8px, 12px);
       color: $color-search-field-description;
     }
   }

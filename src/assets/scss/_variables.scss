@@ -1,8 +1,11 @@
 // Default settings
-$width-design: 1366;
-$width-divider: $width-design / 100!default;;
+$font-family: "Helvetica Neue", Helvetica, Arial, sans-serif!default;
+$width-min: 320!default;
+$width-max: 1400!default;
+$width-design: 1366!default;
+$width-divider: $width-design / 100!default;
 $base-font-size: 16px!default;
-$transition-all: all .2s ease-in-out!default;;
+$transition-all: all .2s ease-in-out!default;
 
 // Forms
 $color-search-input-bg: #707070!default;
@@ -15,7 +18,7 @@ $color-topbar-font: #ffffff!default;
 
 // Header
 $header-height: 100px!default;;
-$header-logo-width: 20%!default;;
-$shadow-header: 3px 0 7px rgba(0, 0, 0, 0.1)!default;;
+$header-logo-width: 20%!default;
+$shadow-header: 3px 0 7px rgba(0, 0, 0, 0.1)!default;
 $color-header-bg: #4b4b4b!default;
 $color-header-logo-bg: #ffffff!default;
