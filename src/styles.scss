@@ -39,6 +39,34 @@ body {
 }
 
 /*
+  Buttons
+ */
+.btn {
+  display: inline-block;
+  @include rem(padding-left, 20px);
+  @include rem(padding-right, 20px);
+  @include rem(padding-top, 10px);
+  @include rem(padding-bottom, 10px);
+  color: $color-btn-font;
+  background-color: $color-btn;
+
+  &:hover {
+    color: $color-btn-font-hover;
+    background-color: $color-btn-hover;
+  }
+}
+
+.btn-primary {
+  color: $color-btn-font-primary;
+  background-color: $color-btn-primary;
+
+  &:hover {
+    color: $color-btn-font-hover-primary;
+    background-color: $color-btn-hover-primary;
+  }
+}
+
+/*
   Menu styling
  */
 .menu {
