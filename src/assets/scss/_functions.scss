@@ -15,12 +15,20 @@
 }
 
 // Get value based on the width divider
-@function get-width($width, $parent-percent-width: '') {
+@function get-width($width, $parent-percent-width: '', $percentage: true) {
   @if type-of($parent-percent-width) == 'number' {
-    @return strip-unit($width) / (parent-width-by-percent($parent-percent-width) / 100) + %;
+    @if $percentage == true {
+      @return strip-unit($width) / (parent-width-by-percent($parent-percent-width) / 100) + %;
+    }
+
+    @return strip-unit($width) / (parent-width-by-percent($parent-percent-width) / 100);
   }
 
-  @return strip-unit($width) / $width-divider + %;
+  @if $percentage == true {
+    @return strip-unit($width) / $width-divider + %;
+  }
+
+  @return strip-unit($width) / $width-divider;
 }
 
 // Get font-size based on the design width and design font size

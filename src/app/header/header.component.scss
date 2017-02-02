@@ -91,7 +91,7 @@ header.main-header {
     outline: none;
   }
 
-  .input-full {
+  .input-full:not(.btn):not(.btn-primary) {
     background-color: $color-search-input-bg;
   }
 
@@ -99,10 +99,27 @@ header.main-header {
     border: 2px solid #{$color-search-input-bg};
   }
 
+  .input-search-websites,
+  .input-search-submit,
+  .input-locale {
+    button {
+      margin: 0;
+      padding: 0;
+      border: none;
+
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
   .input-locale {
     min-width: get-width(66px, 80%);
     height: 40%;
-    padding: get-width(6px, 80%);
+
+    button {
+      padding: get-width(66px, 80%, false) - get-width(6px, get-width(66px, 80%), false) + %;
+    }
 
     img {
       width: auto;
@@ -119,6 +136,7 @@ header.main-header {
       // TODO: Change it or sort out how it works
       // I've found out that dividing design width with design font size will produce the best divider for the calc
       font-size: by-viewport-size(12px, 20px); // Not sure why it fits, but it's the best scaling font size
+      color: $color-search-font;
     }
 
     small {
@@ -126,6 +144,22 @@ header.main-header {
       margin-top: get-width(20px);
       font-size: by-viewport-size(8px, 12px);
       color: $color-search-field-description;
+    }
+  }
+
+  .input-search-websites {
+    width: get-width(150px, 80%);
+    height: 40%;
+  }
+
+  .input-search-submit {
+    width: get-width(135px, 80%);
+    height: 40%;
+
+    button {
+      font-size: by-viewport-size(10px, 16px);
+      font-weight: $font-bold;
+      text-transform: uppercase;
     }
   }
 }
