@@ -4,17 +4,20 @@
 import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from "@angular/common";
 
-import { HeaderComponent } from '../header/header.component';
-import { FooterComponent } from '../footer/footer.component';
+import { HeaderComponent } from '../layout/header/header.component';
+import { BodyComponent } from '../layout/body/body.component';
+import { FooterComponent } from '../layout/footer/footer.component';
 
 @NgModule({
   imports: [CommonModule],
   exports: [
     HeaderComponent,
+    BodyComponent,
     FooterComponent
   ],
   declarations: [
     HeaderComponent,
+    BodyComponent,
     FooterComponent
   ],
   providers: [],

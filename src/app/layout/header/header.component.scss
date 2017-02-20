@@ -1,6 +1,6 @@
-@import '../../assets/scss/variables';
-@import '../../assets/scss/mixins';
-@import '../../assets/scss/functions';
+@import '../../../assets/scss/variables';
+@import '../../../assets/scss/mixins';
+@import '../../../assets/scss/functions';
 
 div.top-bar {
   position: relative;
@@ -68,7 +68,7 @@ header.main-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100% - $header-logo-width;
+  width: $header-form-width;
   @include rem(padding-right, 30px);
   @include rem(padding-left, 30px);
 

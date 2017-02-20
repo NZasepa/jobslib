@@ -1,0 +1,9 @@
+@import '../../../assets/scss/variables';
+
+main.main-content {
+  width: calc(100% - 60px);
+  min-height: 100vh;
+  margin: 30px;
+  background-color: $color-main-bg;
+  box-shadow: $shadow-header;
+}
