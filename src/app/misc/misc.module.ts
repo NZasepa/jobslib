@@ -2,19 +2,22 @@
  * Created by Natan on 04.03.2017.
  */
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
 import { DropdownListComponent } from './dropdown-list/dropdown-list.component';
+import { DropdownContainerDirective } from './dropdown-list/dropdown-container.directive';
 
 @NgModule({
   imports: [
-    CommonModule,
-    FormsModule
+    BrowserModule,
+    ReactiveFormsModule
   ],
   exports: [
+    DropdownContainerDirective,
     DropdownListComponent
   ],
   declarations: [
+    DropdownContainerDirective,
     DropdownListComponent
   ]
 })

@@ -1,0 +1,10 @@
+<aside class="dropdown-list-wrapper" [ngClass]="{'open': isOpen}">
+  <form [formGroup]="searchForm" class="dropdown-search">
+    <label class="form-label">
+      <input type="text" class="form-control" formControlName="search-term" placeholder="Start typing..." />
+    </label>
+  </form>
+  <ul class="dropdown-list">
+    <li class="list-item">Hello</li>
+  </ul>
+</aside>
