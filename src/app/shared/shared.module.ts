@@ -4,10 +4,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from "@angular/common";
 import { FormsModule } from "@angular/forms";
+import { MiscModule } from '../misc/misc.module';
 
 @NgModule({
-  imports: [CommonModule],
-  exports: [CommonModule, FormsModule],
+  imports: [
+    CommonModule,
+    MiscModule
+  ],
+  exports: [
+    CommonModule,
+    FormsModule,
+    MiscModule
+  ],
   declarations: []
 })
 export class SharedModule {}
