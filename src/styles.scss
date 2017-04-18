@@ -20,7 +20,7 @@ html {
 
 body {
   font-family: $font-family;
-  background-color: #e4e4e4;
+  background-color: $color-light-grey;
 }
 
 /*
@@ -86,8 +86,48 @@ input.form-control {
 }
 
 /*
+  Sidebar styling
+ */
+.sidebar_container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: $width-aside;
+  min-height: 768px;
+  height: 100vh;
+  background-color: $color-aside-bg;
+  border-right: 1px solid #{$color-dark-grey-border};
+  z-index: 100;
+
+  header.sidebar_container-header {
+    padding: 30px 30px 40px;
+    border-bottom: 1px solid #{$color-dark-grey-border};
+
+    h1 {
+      margin: 0;
+      font-weight: 500;
+      font-size: 44px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+/*
   Menu styling
  */
+.navigation_list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navigation_item-link {
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .menu {
   margin: 0;
   padding: 0;
@@ -105,4 +145,13 @@ input.form-control {
   }
 
   @include _clearfix();
+}
+
+/*
+  Main container
+ */
+.main_container {
+  min-height: 768px;
+  height: 100vh;
+  margin-left: $width-aside;
 }

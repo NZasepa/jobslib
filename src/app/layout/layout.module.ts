@@ -7,20 +7,25 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { BodyComponent } from './body/body.component';
 import { MiscModule } from '../misc/misc.module';
+import { PrimaryNavigationComponent } from './primary-navigation/primary-navigation.component';
+import { RouterModule } from '@angular/router';
 @NgModule({
   imports: [
+    RouterModule,
     MiscModule,
     SharedModule
   ],
   exports: [
     HeaderComponent,
     BodyComponent,
-    FooterComponent
+    FooterComponent,
+    PrimaryNavigationComponent
   ],
   declarations: [
     HeaderComponent,
     BodyComponent,
-    FooterComponent
+    FooterComponent,
+    PrimaryNavigationComponent
   ]
 })
 export class LayoutModule {}

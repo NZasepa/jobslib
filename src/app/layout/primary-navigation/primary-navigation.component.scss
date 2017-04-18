@@ -1,0 +1,15 @@
+@import '../../../assets/scss/variables';
+
+.navigation--primary {
+  margin-top: 50px;
+}
+
+.navigation_item-link {
+  padding: 15px 30px;
+  color: $color-font-primary-navigation;
+  transition: background-color .2s ease-in-out;
+
+  &:hover {
+    background-color: darken($color-dark-grey, 5%);
+  }
+}
