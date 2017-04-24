@@ -21,6 +21,10 @@ html {
 body {
   font-family: $font-family;
   background-color: $color-light-grey;
+  background-image: url(./assets/images/bg-image.jpg);
+  background-size: cover;
+  background-position: right 75%;
+  background-repeat: no-repeat;
 }
 
 /*
