@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 
 import { ListingComponent } from './listing.component';
 import { ROUTES_CONFIG } from './listing.routes';
+import { ListingFindComponent } from './listing-find/listing-find.component';
 
 @NgModule({
   imports: [
@@ -11,7 +12,8 @@ import { ROUTES_CONFIG } from './listing.routes';
     RouterModule.forChild(ROUTES_CONFIG)
   ],
   declarations: [
-    ListingComponent
+    ListingComponent,
+    ListingFindComponent
   ]
 })
 export class ListingModule {}
