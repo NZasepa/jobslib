@@ -11,7 +11,7 @@ export const APP_ROUTING_CONFIG: Routes = [
     loadChildren: './views/home/home.module#HomeModule'
   },
   {
-    path: 'listing',
-    loadChildren: './views/listing/listing.module#ListingModule'
+    path: 'search',
+    loadChildren: './views/search/search.module#SearchModule'
   }
 ];

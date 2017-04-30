@@ -1,0 +1,7 @@
+<h2 href="#" class="page_number">1</h2>
+
+<ul class="sites_list" [@flyInOut]="animationState">
+  <li class="sites_list-single" *ngFor="let site of sites$ | async">
+    <a class="sites_list-link" [routerLink]="['../', site.id]" (click)="onSiteSelected(site)">{{ site.name }}</a>
+  </li>
+</ul>

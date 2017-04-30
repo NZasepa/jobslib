@@ -1,0 +1,46 @@
+@import '../../../../assets/scss/mixins';
+
+:host {
+  @include flex-center();
+
+  .page_number {
+    margin-bottom: 60px;
+  }
+
+  .sites_list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    @include _clearfix();
+
+    li {
+      float: left;
+      margin-left: 20px;
+      margin-bottom: 20px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:nth-child(5n + 1) {
+        clear: both;
+        margin-left: 0;
+      }
+    }
+
+    a {
+      display: block;
+      height: 100px;
+      width: 100px;
+      text-align: center;
+      line-height: 100px;
+      background-color: #ececec;
+      transition: background-color .2s ease-in-out;
+
+      &:hover {
+        background-color: #ccc;
+      }
+    }
+  }
+}

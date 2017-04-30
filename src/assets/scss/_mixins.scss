@@ -14,3 +14,12 @@
     display: table;
   }
 }
+
+@mixin flex-center($min-height: 600px) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: $min-height;
+  height: 100vh;
+}

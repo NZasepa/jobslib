@@ -20,7 +20,7 @@ const initialState: State = {
 
 export function reducer(state = initialState, action: ListingActions.Actions): State {
   switch (action.type) {
-    case ListingActions.FIND: {
+    case ListingActions.SEARCH: {
       return {
         ...state,
         findQuery: action.payload,
@@ -28,7 +28,7 @@ export function reducer(state = initialState, action: ListingActions.Actions): S
       };
     }
 
-    case ListingActions.FIND_SUCCESS: {
+    case ListingActions.SEARCH_SUCCESS: {
       return {
         ...state,
         resultsCount: action.payload.count,

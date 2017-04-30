@@ -1,0 +1,9 @@
+@import '../../../../assets/scss/mixins';
+
+:host {
+  @include flex-center();
+
+  .page_number {
+    margin-bottom: 60px;
+  }
+}

@@ -1,0 +1,3 @@
+<h2 href="#" class="page_number">2</h2>
+
+<dynamic-form [fields]="(selectedSite$ | async)?.queryForm" (submitted)="siteQueryFormSubmitted($event)"></dynamic-form>
