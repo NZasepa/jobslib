@@ -7,3 +7,9 @@
     margin-bottom: 60px;
   }
 }
+
+:host /deep/ {
+  .site_query_form {
+    width: 580px;
+  }
+}

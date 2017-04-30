@@ -10,6 +10,9 @@ export class DynamicFormComponent implements OnInit {
   @Input()
   fields: any[] = [];
 
+  @Input()
+  classes: Array<string> = [];
+
   @Output()
   submitted: EventEmitter<any> = new EventEmitter<any>();
 

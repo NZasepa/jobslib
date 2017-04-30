@@ -11,6 +11,13 @@ export const SITES_DATA: Site[] = [
         placeholder: 'Keywords',
         description: 'e.g. front-end, javascript',
         type: 'input-text'
+      },
+      {
+        name: 'l',
+        label: 'Location',
+        placeholder: 'Location',
+        description: 'e.g. austin',
+        type: 'input-text'
       }
     ]
   },

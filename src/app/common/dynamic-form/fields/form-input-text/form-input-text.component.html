@@ -1,5 +1,5 @@
-<div class="dynamic_form-field form_input-text" [formGroup]="group">
+<div class="form_field form_field-dynamic" [formGroup]="group">
   <label>{{ field.label }}</label>
-  <input type="text" [attr.placeholder]="field.placeholder" [formControlName]="field.name" />
+  <input type="text" class="form_input form_input-text" [attr.placeholder]="field.placeholder" [formControlName]="field.name" />
   <small>{{ field.description }}</small>
 </div>
